@@ -58,6 +58,7 @@ function getDiscount(taxBoolean, guests) {
 /* Calling getDiscount() to determine if tax is applied to dishes and the discount value */
 getDiscount(true, 2); // Returns dishes with tax applied and a discount of 5 for 2 guests
 getDiscount(false, 10); // Returns dishes with no tax applied and a discount of 10 for 10 guests
+
 /* A couple of test calls with varying parameters */
 getDiscount(); // No parameters passed: returns "You need to pass a boolean to the getPrices call!" & "The second argument must be a number between 0 and 30"
 getDiscount(null, "hello"); // Invalid parameters passed: returns "You need to pass a boolean to the getPrices call!" & "The second argument must be a number between 0 and 30"
