@@ -1,2 +1,8 @@
 # JavaScript-Receipt-Maker
-JavaScript Receipt Maker as part of Meta's Programming with JavaScript course.
+A simple JavaScript script that uses conditional statements to evaluate tax and discount for dishes in an Array called 'dishData'. This script was developed as part of the Programming with JavaScript course from Meta.
+
+Each dish in the 'dishData' array has a 'name' and 'price'. The price of each dish can have a fixed tax rate of '1.20' applied to each dish based on whether a parameter called 'taxBoolean' is specified as true or false in the function getPrices(). The getPrices() function also logs the name and price of each dish to the console after the conditional statements evaluate whether a tax value should be applied to the price of each dish. 
+
+The getDiscount() funciton is used to evaluate the amount of discount based on the number of guests specified. The getDiscount() function first invokes the getPrices() function before executing conditional statements to evaluate the discount value. The getDiscount() function first checks that the number of guests specified as a parameter is a number, and that the number is between 1-30. If the number of guests specified is less than 5 then the discount value will be 5. Else if the number of guests specified is greater than or equal to 5 then the discount value will be 10. 
+
+The function getDiscount() is executed at the bottom of the script to illustrate the results passing boolean and number parameters. There are also a few test calls to the getDiscount() function with no parameters and invaled parameters to ensure the default else block is working in each function. These default else blocks handle missing or invalid data.
