@@ -42,7 +42,7 @@ function getPrices(taxBoolean) {
 on the number of guests specified using the guests parameter. */    
 function getDiscount(taxBoolean, guests) {
     getPrices(taxBoolean); // Calls the getPrices() function to apply tax to dishes
-    if (typeof guests == 'number' && guests > 0 && guests < 30) {
+    if (typeof guests == 'number' && guests > 0 && guests <= 30) {
         let discount = 0; // Discount is 0 by default.
         if (guests < 5) { 
             discount = 5; // Discount of 5 applied for <5 guests
