@@ -7,7 +7,7 @@ This project contains one .js file:
   - This file uses the getDiscount() function to pass user input and apply a tax and discount value for dishes if applicable.
 
 **Overview of the script:**
-- Each dish in the 'dishData' array has a 'name' and 'price'.
+- Each dish in the 'dishData' Array has a 'name' and 'price'.
   - The price of each dish can have a fixed tax rate of '1.20' applied based on whether a parameter called 'taxBoolean' is specified as true or false in the function getPrices().
 - The **getPrices()** function logs the name and price of each dish to the console after conditional statements evaluate whether a tax value should be applied.
 - The **getDiscount()** function is used to evaluate the amount of discount eligible based on the number of guests attending.
