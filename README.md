@@ -15,5 +15,5 @@ This project contains one .js file:
   - The getDiscount() function first checks that the number of guests specified as a parameter is a number, and that the number is between 1-30.
     - If the number of guests specified is 5 or less then the discount value will be 5.
     - Else if the number of guests specified is 6 or more then the discount value will be 10. 
-- The function getDiscount() is executed at the bottom of the script to illustrate the results passing boolean and number parameters.
+- The getDiscount() function is executed at the bottom of the script to illustrate the results of passing boolean and number parameters.
   - There are a few test calls to the getDiscount() function with no parameters and invalid parameters to ensure that the default else block is working in each function.
