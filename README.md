@@ -1,4 +1,4 @@
-# JavaScript-Receipt-Maker
+# Receipt-Maker
 A simple JavaScript script that uses conditional statements to evaluate tax and discount for dishes in an Array called 'dishData'. This script was developed as part of the Programming with JavaScript course from Meta.
 
 This project contains one .js file:
