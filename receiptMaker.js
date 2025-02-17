@@ -19,27 +19,24 @@ const dishData = [
 ]
 const tax = 1.20;
 
-/* The getPrices() function is used to apply a tax value of '1.20' to all of the dishes 
-in the dishData Array based on whether the parameter taxBoolean is true or false. */
+// Used to apply a tax value to all dishes if taxBoolean equals true
 function getPrices(taxBoolean) {
     for (const dish of dishData) {
         let finalPrice;
-        if (taxBoolean == true) { // If the taxBoolean parameter is true
-            finalPrice = dish.price * tax; // Multiply the price of each dish by the tax value
+        if (taxBoolean == true) { // taxBoolean true
+            finalPrice = dish.price * tax; // Tax value applied
         } 
-        else if (taxBoolean == false) { // Else if the taxBoolean parameter is false
-            finalPrice = dish.price; // The price of each dish will have no tax applied
+        else if (taxBoolean == false) { // taxBoolean false
+            finalPrice = dish.price; // No tax applied
         } else {
-            console.log("You need to pass a boolean to the getPrices call!"); // Console log for missing taxBoolean parameter
+            console.log("You need to pass a boolean to the getPrices call!");
             return;
         }
-        // Each for loop iteration will log the dish name a price to the console
         console.log(`Dish: ${dish.name} Price: $${finalPrice}`);
     }
 }
 
-/* The getDiscount() function is used to evaluate the total discount value based
-on the number of guests specified using the guests parameter. */    
+// Used to calculate the total discount based on the number of guests specified    
 function getDiscount(taxBoolean, guests) {
     getPrices(taxBoolean); // Calls the getPrices() function to apply tax to dishes
     if (typeof guests == 'number' && guests > 0 && guests <= 30) {
@@ -51,14 +48,14 @@ function getDiscount(taxBoolean, guests) {
         }
         console.log(`Discount is: ${discount}\n`); // Log the discount value to the console
     } else {
-        console.log("The second argument must be a number between 0 and 30\n"); // Console log for guests parameter outside the value of 0-30
+        console.log("The second argument must be a number between 0 and 30\n");
     }
 }
 
-/* Calling getDiscount() to determine if tax is applied to dishes and the discount value */
-getDiscount(true, 2); // Returns dishes with tax applied and a discount of 5 for 2 guests
-getDiscount(false, 10); // Returns dishes with no tax applied and a discount of 10 for 10 guests
+// Test calls to determine if tax is applied to dishes and total discount value
+getDiscount(true, 2); // Returns dishes with tax applied and a discount of 5
+getDiscount(false, 10); // Returns dishes with no tax applied and a discount of 10
 
-/* A couple of test calls with varying parameters */
-getDiscount(); // No parameters passed: returns "You need to pass a boolean to the getPrices call!" & "The second argument must be a number between 0 and 30"
-getDiscount(null, "hello"); // Invalid parameters passed: returns "You need to pass a boolean to the getPrices call!" & "The second argument must be a number between 0 and 30"
+// Default condition test calls
+getDiscount(); // Returns "You need to pass a boolean to the getPrices call!" & "The second argument must be a number between 0 and 30"
+getDiscount(null, "hello"); // Returns "You need to pass a boolean to the getPrices call!" & "The second argument must be a number between 0 and 30"
