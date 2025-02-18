@@ -10,3 +10,7 @@ A simple JavaScript application that is used to apply tax and discounts to an ar
 # Installation
 1. Clone the repository.
 2. You can either copy the code into your browsers console, otherwise you can run the script using the command 'node receiptMaker.js' if you have Node.js installed on your device.
+
+# Usage
+- The output of this application is hard-coded and will be the same each time it's executed.
+- To modify the output of this script you can optionally invoke getDiscount() with varying parameters.
